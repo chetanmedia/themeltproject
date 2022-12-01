@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&display=swap');
+
+:root {
+    --first-color: hsl(203,71%, 60%);
+    --second-color: hsl(277,56%, 68%);
+    --text-color: hsl(203,8%, 98%);
+    --first-color-light: hsl(203,8%, 80%);
+    --body-color: hsl(259,20%, 18%);
+    
+
+    --body-font: 'Oxanium', cursive;
+    --biggest-font-size: 2.25rem;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --smaller-font-size: .75rem;
+
+    --font-semi-bold: 600;
+ 
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --mainBack: #0d1117;
+    --codeBack: #161b22;
+    --codeFont: #8b949e;
+    --codeRef: #343941;
+    --navLink: #5198ea;
+    --navBack: #010409;
+    --navBorder: #30363d;
+    --mainHeadUnder: #21262d;
+    --mainHeadFont: #c9d1d9;
+    --mainHeadSubFont: #87909a;
+    --bodyFont: #b9c1c9;
+  }
+  
+  body {
+    font-family: Oxanium, cursive;
+    color: var(--bodyFont);
+    background-color: var(--mainBack);
+    line-height: 2;
+    overflow-x: hidden;
+  }
+
+  .logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu{
+  position: relative;
+  top: 0;
+  padding:10;
+  margin-top: 35px;
+  left:800px;
+}
+
+.menu a{
+  font-family: 'Oxanium',cursive;
+  font-size: 25px;
+  color: #fff;
+  bottom: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.menu a img{
+  height: 20px;
+  width: 20px;
+  
+}
+  
+  #navbar {
+    position: fixed;
+    width: 420px;
+    /* width: 450px; */
+    top: 15px;
+    height: 100%;
+    border-right: solid;
+    border-width: 0.8px;
+    border-color: var(--navBorder);
+    z-index: 1;
+  }
+  
+  #navbar header {
+    color: var(--mainHeadFont);
+    background-color: var(--mainBack);
+    font-size: 32px;
+    margin-left: 20px;
+    text-align: left;
+    height: 75px;
+    z-index: 1;
+    overflow-y: hidden;
+  }
+  
+  #navbar header .icon {
+    fill: white;
+    height: 25px;
+    width: 25px;
+  }
+  
+  #navbar ul {
+    height: 100%;
+    text-align: left;
+    /* margin-left: 20px; */
+    background-color: var(--navBack);
+    border-top: solid;
+    border-width: 0.8px;
+    border-color: var(--navBorder);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  #navbar ul li {
+    font-size: 1rem;
+    padding: 10px;
+    list-style: none;
+    height: 60px;
+    margin-left: 10px;
+  }
+  
+  #navbar ul li:first-child {
+    margin-top: 15px;
+  }
+  
+  #navbar li:nth-of-type(6) {
+    padding-left: 20px;
+    /* font-size: 0.85rem; */
+  }
+  
+  #navbar li:nth-of-type(7) {
+    padding-left: 20px;
+    /* font-size: 0.85rem; */
+  }
+  
+  #navbar li:nth-of-type(8) {
+    padding-left: 20px;
+    /* font-size: 0.85rem; */
+  }
+  
+  #navbar li a {
+    text-decoration: none;
+    color: var(--navLink);
+    font-size: 14px;
+  }
+  
+  #navbar li a:hover {
+    text-decoration: underline;
+  }
+  
+  #main-doc {
+    position: absolute;
+    left: 420px;
+    padding: 0 30px;
+    /* margin-right: 388px; */
+  
+    max-width: 1100px;
+    color: var(--bodyFont);
+  }
+  
+  #main-doc section {
+    margin: 30px 15px;
+  }
+  
+  #main-doc header {
+    text-align: left;
+    font-size: 24px;
+    padding: 10px 0;
+    color: var(--mainHeadFont);
+    border-bottom: 1px solid var(--mainHeadUnder);
+  }
+  
+  #main-doc section p {
+    margin: 5px 0;
+  }
+  
+  #main-doc #About_Git header {
+    font-size: 32px;
+  }
+  
+  #main-doc #About_Git p {
+    font-size: 24px;
+    color: var(--mainHeadSubFont);
+  }
+  
+  #main-doc #GitHub_and_the_command_line header:nth-of-type(2) {
+    border-bottom: none;
+    color: var(--mainHeadSubFont);
+  }
+  
+  #main-doc article {
+    padding: 10px;
+    text-align: justify;
+  }
+  
+  #main-doc code {
+    display: inline-block;
+    padding: 20px;
+    background-color: var(--codeBack);
+    border-radius: 8px;
+    border: 1px solid var(--mainHeadUnder);
+    color: var(--codeFont);
+    line-height: 2.5;
+    margin-top: 20px;
+  }
+  
+  #main-doc span code {
+    padding: 0px 5px;
+    border-radius: 1px;
+    line-height: 1.8;
+    margin-top: 0;
+  }
+  
+  #example {
+    color: var(--bodyFont);
+  }
+  
+  #main-doc a {
+    color: var(--navLink);
+    text-decoration: none;
+  }
+  
+  #main-doc a:hover {
+    text-decoration: underline;
+  }
+  
+  #main-doc ul {
+    margin: 10px 40px;
+    list-style-type: square;
+  }
+  
+  span {
+    font-weight: 900;
+  }
+
+  #bold{
+    font-size: 1.1em;
+    font-weight: 900;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    body {
+      line-height: 1.8;
+    }
+  
+    #navbar {
+      width: 300px;
+    }
+  
+    #navbar li:nth-of-type(6) {
+      padding-left: 20px;
+      height: 80px;
+    }
+  
+    #navbar li:nth-of-type(7) {
+      padding-left: 20px;
+      height: 80px;
+    }
+  
+    #navbar li:nth-of-type(8) {
+      padding-left: 20px;
+      height: 80px;
+    }
+  
+    #main-doc {
+      left: 300px;
+    }
+  
+    #main-doc #About_Git p {
+      line-height: 1.5;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    body {
+      line-height: 1.6;
+    }
+  
+    #navbar {
+      width: 200px;
+    }
+  
+    #navbar li:nth-of-type(6) {
+      padding-left: 20px;
+      height: 80px;
+    }
+  
+    #navbar li:nth-of-type(7) {
+      padding-left: 20px;
+      height: 95px;
+    }
+  
+    #navbar li:nth-of-type(8) {
+      padding-left: 20px;
+      height: 95px;
+    }
+  
+    #navbar li:nth-of-type(9) {
+      height: 80px;
+    }
+  
+    #main-doc {
+      left: 200px;
+    }
+  
+    #main-doc section p {
+      margin: 15px 0;
+    }
+  
+    #main-doc #About_Git p {
+      line-height: 1.2;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    body {
+      line-height: 1.6;
+    }
+  
+    #navbar {
+      position: absolute;
+      height: 400px;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      overflow-y: hidden;
+      border-right: none;
+    }
+  
+    #navbar header {
+      height: 70px;
+      padding-top: 10px;
+      padding: 10px 25px;
+      margin-left: 0;
+    }
+  
+    #navbar ul {
+      width: 100%;
+      height: 300px;
+    }
+  
+    #navbar ul li {
+      width: 100%;
+      height: auto;
+      padding: 0 25px;
+      margin: 0;
+    }
+  
+    #navbar ul li:first-child {
+      margin-top: 10px;
+    }
+  
+    #navbar li:nth-of-type(6) {
+      padding-left: 35px;
+      height: auto;
+    }
+  
+    #navbar li:nth-of-type(7) {
+      padding-left: 35px;
+      height: auto;
+    }
+  
+    #navbar li:nth-of-type(8) {
+      padding-left: 35px;
+      height: auto;
+    }
+  
+    #navbar li:nth-of-type(9) {
+      height: auto;
+    }
+  
+    #main-doc {
+      padding: 0 10px;
+      top: 360px;
+  
+      left: 0;
+      height: 80%;
+    }
+  
+  /*   #main-doc section {
+      scroll-margin-top: 400px;
+    } */
+  
+    #main-doc section:last-child {
+      margin-bottom: 300px;
+    }
+  
+    #main-doc #About_Git p {
+      font-size: 18px;
+    }
+  }
+
+
+  @media only screen and (max-width: 450px){
+
+    .menu{
+      position: absolute;
+      left: 300px;
+    }
+
+    .menu a{
+      font-size: 18px;
+      padding-top: 0;
+      margin: 0;
+    }
+
+  }
+
+  @media only screen and (max-width: 900px){
+
+    body{
+      margin: 50px;
+    }
+
+    .menu{
+      position: absolute;
+      left: 540px;
+    }
+
+    .menu a{
+      font-size: 18px;
+      padding-top: 0;
+      margin: 0;
+    }
+
+  }
+  

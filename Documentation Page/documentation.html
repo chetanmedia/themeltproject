@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.0/lottie.min.js" integrity="sha512-17otjw7eTNU9MtpB7mFfXEwB6yDjA2qjDFkKSvsywI1PRAgpyOo+cp/wPSE/1kK4fFjA9OKsZVO1tr93MGNCEw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <div class="menu">
+      <a href="/index.html"><img src="/Source Code/Page 2/Assets/back button.png" alt="">Back</a>
+      </div>
+    <nav id="navbar">
+        <h2 class="logo"> <img src="/Assets/logo animation.gif" width="75" height="75" alt="">MELT</h2>
+        <div class="toggle"></div>
+      <ul>
+        <li><a class="nav-link" href="#About_MELT">THE MELT PROJECT</a></li>
+        <li>
+          <a class="nav-link" href="#About_MELT_PROJECT"
+            >General</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#melt@mix">MELT@MiX</a>
+        </li>
+        <li><a class="nav-link" href="#websiteworks">How the website works</a></li>
+        <li>
+          <a class="nav-link" href="#scenes">Scenes</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#ar">AR</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#team">Team</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#reference">Reference</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="About_MELT">
+        <header>Documentation</header>
+        <article>
+          <p>
+            Learn about the MELT PROJECT's inpiration and technicalities.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="About_MELT_PROJECT">
+        <header>General</header>
+        <article>
+          <p>
+            Media Exposing Limited Time (MELT) is a large-scale immersive audio/visual art experience 
+            that invites participants to explore the theme of climate change by combining large interactive
+            projections, web-based interfaces, and Augmented Reality.
+          </p>
+    
+          <p>
+            Featuring original content built-in visual programming software TouchDesigner, MELT employs 
+            multiple projectors, projection mapping techniques, and motion-sensing input devices to 
+            transform the 3200-square-foot Enhanced Immersion Studio ASU’s world-class Media and 
+            Immersive eXperience (MIX) Center in Mesa, Arizona. It will immerse users in a future-oriented 
+            environment designed to engage the community in meaningful, collaborative, and empathic 
+            discussion of environmental issues.
+          </p>
+          <p>
+            Attendees will have the opportunity to manipulate the projected environment via a custom-built 
+            website that translates messages to a node-based visual programming language in real-time.
+          </p>
+          <ul>
+            <li>
+                Participants are encouraged to download the <a href="https://apps.apple.com/us/app/hoverlay/id1207928666" target="_blank">Hoverlay Augmented Reality app</a> to 
+                take advantage of the full experience, 
+                complete with 3D assets and spatial audio.
+            </li>
+            <li>
+                MELT is the final project developed by the students from the D551 Immersive Experience 
+                Design course led by Ana Herruzo and Weidi Zhang, a new course offered for the first time 
+                at ASU MiX center. The class is made up of a wide array of interdisciplinary students, 
+                with diverse backgrounds such as artists, architects, software developers, researchers, 
+                and designers.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="melt@mix">
+        <header>MELT @ MiX </header>
+        <article>
+          <p>
+            Media Exposing Limited Time (MELT) is a large-scale immersive art experience that invites participants to explore the theme of climate change by combining interactive projections, web-based interfaces, and Augmented Reality experiences.
+<br><br>
+Thursday, December 1 @ 6:00 pm [Time TBC]
+<br>
+Enhanced Immersion Studio <br>
+Media and Immersive Experience (MIX) Center <br>
+50 North Centennial Way Mesa, AZ 85201 <br> <br>
+
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="websiteworks">
+        <header>How the website works</header>
+        <article>
+          <p>
+            
+          </p>
+          <p>
+            We have built a website as a front end interface to interact with the system by providing an 
+            ability for the user to select scenes out of the four avaialble scenes.
+            The selected scene data is then passed to the TouchDesigner control panel in the form of JSON data 
+            by including the scene name and the scene code.
+
+            <br>
+            <br>
+
+            Below is the workflow diagram of the data from the website to TouchDesigner.
+
+            <br>
+
+            <div class="col-lg-8" id="lottie animation">
+              <script>
+                var animation = bodymovin.loadAnimation({
+                  container: document.getElementById('lottie animation'),
+                  path: 'workflow diagram lottie.json',
+                  render: 'svg',
+                  loop: true,
+                  autoplay: true,
+                  name: 'animation'
+                })
+              </script>
+            </div>
+
+            <br>
+
+            The website packs the selected scene data into JSON and sends the data to Heroku server where the server side
+            node js code is executed. The server code dynamically listens to the data sent through websocket and then passes 
+            the same to the touchdesigner control panel, which is programmed to continuosuly receive the JSON data from the server. 
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="scenes">
+        <header>Scenes</header>
+        <header>Design Statement</header>
+        <p>The topic of environmental stability is a constant thought among humans no matter their 
+          generation, culture, or involvement with the living world around them. MELT creates interactions 
+          that bluntly show humans how we directly impact our surroundings no matter how abstractly we view 
+          them. This immersive experience leaves those who interact with it haunting thoughts of “Will this
+           all still be here in the future, or will it MELT away?”</p>
+        <article>
+          <p>
+            <span id="bold">SPILL</span>  <br> <br> An explosive visual that engulfs the user in an oil spill of contrasting colors.
+             When oil spills it consumes every inch of surroundings and organisms around it with deadly 
+             speed. By exposing this fossil fuel, which is so essential to humans, users will see the 
+             deathly effects it can have on a larger scale.
+             <br><br><br>
+
+
+             <span id="bold">STORM</span>   <br> <br> The shock and shake of thunder followed by an instant 
+             strike of light will awaken users to the unnatural recurrence of thunderstorms. The earth’s 
+             rise in temperature has awakened the sky to rain down shattering sounds and deadly light more 
+             frequently than ever before. The user will immerse themselves in a field of lighting to see 
+             how dangerous the sky has become in recent years. 
+             <br><br><br>
+
+
+             <span id="bold">MELT </span> <br> <br> Slide across the liquified flooring of a world consumed 
+             by water. The oceans are being oversaturated with the water of once solid glaciers which will 
+             soon consume more land than ever before. Users will wade through a predicted watery environment 
+             based on the projections of what is soon to be a landless world. 
+             <br><br><br>
+
+             <span id="bold">UNDERNEATH</span>  <br> <br> An organism that provides so much life above and 
+             before the sea level, coral is slowly fading away. A giver of food, shelter and life coral 
+             breathes life into the earth. Users will quickly see their impact on coral reefs as it retreats 
+             into the depths of nonexistence from human’s touch. 
+
+
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="ar">
+        <header>AR</header>
+        <article>
+          <p>
+            AR content documentation to be added here.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="team">
+        <header>Team</header>
+        <article>
+          <p>
+            <span id="bold">Professors</span>  <br>
+            Dr. Ana Herruzo <br>
+            Dr. Weidi Zhang <br>
+
+            <br><br>
+
+            <span id="bold">Students</span> <br>
+
+            <span id="bold">Responsive Media System and Content Design:</span> <br>
+            Henry Beach <br>
+            Xavier Nokes
+
+            <br> <br>
+
+            <span id="bold">Web UX, Development & Integration:</span> <br>
+            Chetan Nagaraja
+            <br><br>
+
+            <span id="bold">AR:</span> <br>
+            Mary Kenny <br>
+            Ankita Santhosh Kumar
+
+            <br><br>
+
+            <span id="bold">Marketing Material, Logo & Poster Designs:</span> <br>
+            Clare Witt <br>
+            Kimberly Tsen<br>
+            Nandini Maya Thevar <br>
+
+            <br>
+
+            <span id="bold">Video:</span> <br>
+            Paul Amendola <br>
+
+            
+
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="reference">
+        <header>Reference</header>
+        <article>
+            <li>Server side code reference :
+            Torin Blankensmith
+            </li>
+          </ul>
+        </article>
+      </section>    
+    </main>
+    <script type="text/javascript" src="/Documentation Page/script.js"></script>
+  </body>
+</html>
